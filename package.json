@@ -6,7 +6,7 @@
 	"scripts": {
 		"checkFormat": "prettier --check \"**/*.{js,json,css,scss}\"",
 		"format": "prettier --write \"**/*.{js,json,css,scss}\"",
-		"lint": "eslint src",
+		"lint": "eslint src --color",
 		"start": "webpack --mode=development --watch",
 		"build": "npm run lint && webpack --mode=production && gulp bundle",
 		"prepare": "husky install"
