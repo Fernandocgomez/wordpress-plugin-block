@@ -8,12 +8,8 @@
 		"format": "prettier --write \"**/*.{js,json,css,scss}\"",
 		"lint": "eslint src",
 		"start": "webpack --mode=development --watch",
-		"build": "npm run lint && webpack --mode=production && gulp bundle"
-	},
-	"husky": {
-		"hooks": {
-		"pre-commit": "npm run lint && npm run checkFormat"
-		}
+		"build": "npm run lint && webpack --mode=production && gulp bundle",
+		"prepare": "husky install"
 	},
 	"repository": {
 		"type": "git",
@@ -48,7 +44,7 @@
 		"eslint-plugin-react": "^7.25.0",
 		"gulp": "^4.0.2",
 		"gulp-zip": "^5.1.0",
-		"husky": "^7.0.2",
+		"husky": "^7.0.0",
 		"mini-css-extract-plugin": "^0.6.0",
 		"node-sass": "^4.11.0",
 		"optimize-css-assets-webpack-plugin": "^5.0.1",
