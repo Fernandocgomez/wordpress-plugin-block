@@ -12,7 +12,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run lint && npm run checkFormat"
+		"pre-commit": "npm run lint && npm run checkFormat"
 		}
 	},
 	"repository": {
