@@ -20,6 +20,20 @@ if ( ! defined('ABSPATH') ) {
     exit;
 }
 
+function mytheme_blocks_categories( $categories, $post ){
+    return array_merge(
+        $categories, 
+        array(
+            array(
+                'slug' => 'mytheme-category',
+                'title'=> __('My Theme Category', 'mytheme-blocks'),
+                'icon' => 'wordpress'
+            )
+        )
+    );
+}
+add_filter('block_categories','mytheme_blocks_categories',10,2);
+
 function mytheme_blocks_register_block_type(string $block, array $options = []): void 
 {
     register_block_type(
@@ -49,7 +63,9 @@ function mytheme_block_register(): void
         [
             'wp-blocks',
             'wp-i18n',
-            'wp-element'
+            'wp-element',
+            'wp-editor',
+            'wp-components'
         ]
     );
 

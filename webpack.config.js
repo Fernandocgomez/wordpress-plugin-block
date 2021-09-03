@@ -50,6 +50,7 @@ module.exports = (env, argv) => {
 						{
 							loader: "babel-loader",
 							options: {
+								plugins: ["@babel/plugin-proposal-class-properties"],
 								presets: [
 									"@babel/preset-env",
 									[
@@ -86,6 +87,10 @@ module.exports = (env, argv) => {
 			jquery: "jQuery",
 			"@wordpress/blocks": ["wp", "blocks"],
 			"@wordpress/i18n": ["wp", "i18n"],
+			"@wordpress/editor": ["wp", "editor"],
+            "@wordpress/components": ["wp", "components"],
+			"@wordpress/block-editor": ["wp", "blockEditor"], 
+			"@wordpress/element": ["wp", "element"]
 		},
 	};
 	return config;
